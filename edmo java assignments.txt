@@ -1,0 +1,120 @@
+1.Write a Java program to convert temperature from Fahrenheit to Celsius degree.
+	Test data: input a degree in Fahrenheit:212
+	Expected output: 212.0 degree Fahrenhiet is equal to 100.0 celsius.
+Program:
+---------
+package javabasics;
+import java.util.*;
+public class Java_basic {
+
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the fahrenhiet to change into celsius: ");
+	float fahren=sc.nextFloat();
+	System.out.println("the fahrenhiet is: "+fahren+"°F");
+	float cel;
+	cel=((fahren-32)*5/9);
+	System.out.println("the celsius value is: "+cel+"°C");
+	
+}
+	}
+Output:
+--------
+enter the fahrenhiet to change into celsius: 
+212
+212.0°F is equal to: 100.0°C
+
+-------------------------------------------------------------------------------------------------------------------------
+2. Write a Java program that reads an integer between 0 and 1000 and adds   all the digits in the integer (/,%)
+      Test Data:Input an integer between 0 and 1000: 565
+     Expected Output : The sum of all digits in 565 is 16.
+
+Program:
+-----------
+package javabasics;
+import java.util.*;
+public class Java_basic {
+
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int number, digit, sum = 0;    
+	System.out.print("Enter the integer number 0-1000: ");  
+	number = sc.nextInt();  
+	while(number > 0)  
+	{   
+		digit = number % 10;  
+		sum = sum + digit;  
+		number = number / 10; 
+	}  
+	  
+	System.out.println("Sum of All Digits in the number is:"+sum);  
+	}  
+	}  
+Output:
+--------
+Enter the integer number 0-1000: 565
+Sum of All Digits in the entered number is:16
+
+
+----------------------------------------------------------------------------------------------------------------------
+3.Write a Java program that reads an number in inches,converts it to meters.Note: One inch is 0.0254 meters.
+      Test Data:Input a value for inch:1000
+     Expected Output : 1000.0 inch is 25.4 meters.
+program:
+----------
+package javabasics;import java.util.*;
+public class Java_basic {
+
+	public static void main(String[] args) {
+		 
+		float inches , meters; 
+		Scanner sc = new Scanner(System.in);  
+		
+		System.out.println("Enter the length in inches :");  
+		inches = sc.nextFloat(); 
+		meters=(float) ((inches)/39.37);
+		System.out.println(" "+"inches "+inches +"is :"+meters+" meters");
+	  
+		    }    	 
+		}
+	
+
+output:
+---------
+Enter the length in inches :
+1000
+ inches 1000.0is :25.400051 meters
+-----------------------------------------------------------------------------------------------------------------
+4.Write a java program to convert minutes into number of years and days.
+Test data: input the number of minutes:3456789
+Expected output: 3456789 minutes is approximately 6 years and 210 days.
+
+Program:
+-----------
+package javabasics;
+import java.util.*;
+public class Java_basic {
+
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the minutes to convert into no of years: ");
+	 double minutes = sc.nextDouble();
+	 double Year = 60 * 24 * 365;
+	 long years = (long) (minutes / Year);
+	 int days = (int) (minutes / 60 / 24) % 365;
+	 System.out.println((int) minutes + " minutes is approximately " + years + " years and " + days + " days");
+	    }
+}
+
+output:
+--------
+enter the minutes to convert into no of years: 
+3456789
+3456789 minutes is approximately 6 years and 210 days
+
+
+
+
+
+
+
